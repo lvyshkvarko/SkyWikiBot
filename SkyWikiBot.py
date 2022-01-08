@@ -2,7 +2,6 @@ import telebot
 import wikipedia
 
 wikipedia.set_lang('ru')
-
 bot = telebot.TeleBot('token', parse_mode=None)
 
 
@@ -23,6 +22,7 @@ def handle_text(message):
         bot.send_message(message.chat.id, message.chat.first_name + ', есть еще запросы? Пишите! 🔎')
     except:
         bot.send_message(message.chat.id, 'Ваш запрос слишком короткий или имеет множество значений (или не имеет вовсе). \n\nПожалуйста, замените его на синоним или используйте другой запрос. \n\nНапример: Иван (имя), Титаник (фильм)')
+
 
 print('Запущен')
 bot.polling()
