@@ -1,11 +1,9 @@
 import telebot
 import wikipedia
-import random
 
 wikipedia.set_lang('ru')
-random = random.randint(1, 10)
 
-bot = telebot.TeleBot("5070041001:AAGy0ZQ8uDoIMkdpmgOGDS4QCEnmgL3SaCY", parse_mode=None)
+bot = telebot.TeleBot('token', parse_mode=None)
 
 
 @bot.message_handler(commands=['start', 'help'])
